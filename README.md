@@ -1,6 +1,26 @@
 # Frequency Analysis of Words
 
-[TODO. There will be project description]
+Скрипт состовляет список наиболее часто встречающихся в тексте слов, на вход принимает путь до текстового файла и выводит в консоль десять самых популярных слов в этом файле в порядке убывания частоты.
+
+
+# Quickstart
+
+Пример запуска скрипта в среде Linux, под Python 3.5:
+
+```#!bash
+$ python pprint_json.py <path to file>
+```
+# Example
+
+```#!bash
+
+$ python pprint_json.py shops.json
+#     {
+        "Address": "Малый Гнездниковский переулок, дом 12",
+        "AdmArea": "Центральный административный округ",
+
+```
+
 
 # Project Goals
 
