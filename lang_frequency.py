@@ -4,15 +4,15 @@ import codecs
 
 
 def load_data(filepath):
-    with codecs.open(filepath, encoding='UTF-8') as shops:
-        return shops.read()
+    with codecs.open(filepath, encoding='UTF-8') as file:
+        return file.read()
 
 
 def get_most_frequent_words(data):
     dict_words = {}
     for word in data:
         word = word.lower()
-        if word in dict_words.keys():
+        if word in dict_words():
             dict_words[word] += 1
         else:
             dict_words[word] = 1
@@ -21,6 +21,6 @@ def get_most_frequent_words(data):
 
 if __name__ == '__main__':
     data_from_file = load_data(sys.argv[1]).split()
-    frequent_words = get_most_frequent_words(data_from_file)[0:9]
+    frequent_words = get_most_frequent_words(data_from_file)[:9]
     for pair in frequent_words:
         print("Слово '%s' встречалось в тексте %s раз(а)" % (pair[0], pair[1]))
